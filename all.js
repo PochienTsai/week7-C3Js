@@ -150,6 +150,7 @@ search.addEventListener('change', function (e)
     });
   }
   updateData(newData);
+  renderC3(newData);
 });
 let addTicketBtn = document.querySelector('.addTicket-btn');
 addTicketBtn.addEventListener('click', function (e)
