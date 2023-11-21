@@ -70,6 +70,7 @@ function updateData(data)
   });
   list.innerHTML = str;
   searchResultQty.textContent = `本次搜尋共 ${data.length} 筆資料`;
+  renderC3(data);
 }
 function renderC3(data)
 {
@@ -122,7 +123,6 @@ function init()
       data = res.data;
       // console.log(res.data);
       updateData(data);
-      renderC3(data);
     })
     .catch(err =>
     {
@@ -150,7 +150,6 @@ search.addEventListener('change', function (e)
     });
   }
   updateData(newData);
-  renderC3(newData);
 });
 let addTicketBtn = document.querySelector('.addTicket-btn');
 addTicketBtn.addEventListener('click', function (e)
@@ -174,5 +173,4 @@ addTicketBtn.addEventListener('click', function (e)
   };
   data.push(addData);
   updateData(data);
-  renderC3(data);
 });
